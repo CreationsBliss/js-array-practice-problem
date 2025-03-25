@@ -178,3 +178,197 @@ console.log(arr);  */
 /* const arr = ["a", "b", "c", "d", "e"];
 const arrayToString = arr.join("");
 console.log(arrayToString); */
+
+// Task-21: Can you filter employees who work in the "Engineering" department?
+
+// Solution-21:
+/* const departments = [
+  { id: 1, name: "HR" },
+  { id: 2, name: "Engineering" },
+  { id: 3, name: "Marketing" },
+  { id: 4, name: "Sales" },
+];
+const engineeringDepartment = departments.filter((department) => {
+  return department.name === "Engineering";
+});
+console.log(engineeringDepartment); */
+
+// Task-22: Create a new array that combines employee names and department names in the format: "Alice (HR)".
+
+// Solution-22:
+
+// Task-23: Find the highest salary among employees.
+
+// Solution-23:
+/* const employees = [
+  { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+  { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+  { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+  { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+  { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+  { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+  { id: 7, name: "George", departmentId: 3, salary: 5200 },
+  { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+  { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+  { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+];
+
+let highestSalary = 0;
+employees.forEach((employee) => {
+  if (employee.salary > highestSalary) {
+    highestSalary = employee.salary;
+  }
+});
+console.log(highestSalary); */
+
+// Task-24: Check if there is at least one employee in the "Sales" department.
+
+// Solution-24:
+/* const departments = [
+  { id: 1, name: "HR" },
+  { id: 2, name: "Engineering" },
+  { id: 3, name: "Marketing" },
+  { id: 4, name: "Sales" },
+];
+
+const isThereSalesDepartmentEmployee = departments.some((department) => {
+  return department.name === "Sales";
+});
+console.log(isThereSalesDepartmentEmployee); */
+
+// Task-25: Write a function to filter employees earning more than 6000.
+
+// Solution-25:
+/* const employees = [
+  { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+  { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+  { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+  { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+  { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+  { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+  { id: 7, name: "George", departmentId: 3, salary: 5200 },
+  { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+  { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+  { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+];
+const employeesEarningMoreThanSixThousand = employees.filter((employee) => {
+  return employee.salary > 6000;
+});
+console.log(employeesEarningMoreThanSixThousand); */
+
+// Task-26: Create an array of employee names only.
+
+// Solution-26:
+/* const employees = [
+  { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+  { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+  { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+  { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+  { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+  { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+  { id: 7, name: "George", departmentId: 3, salary: 5200 },
+  { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+  { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+  { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+];
+const employeesName = employees.map((employee) => employee.name);
+console.log(employeesName); */
+
+// Task-27: Calculate the total salary of all employees using reduce method.
+
+// Solution-27:
+/* const employees = [
+  { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+  { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+  { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+  { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+  { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+  { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+  { id: 7, name: "George", departmentId: 3, salary: 5200 },
+  { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+  { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+  { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+];
+const totalSalary = employees.reduce((accumulator, employee) => {
+  return accumulator + employee.salary;
+}, 0);
+
+console.log(totalSalary); */
+
+// Task-28: Is there any employee earning less than 5000?
+
+// Solution-28:
+/* const employees = [
+  { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+  { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+  { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+  { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+  { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+  { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+  { id: 7, name: "George", departmentId: 3, salary: 5200 },
+  { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+  { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+  { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+];
+
+const employeeEarningLessThanFiveThousand = employees.some((employee) => {
+  return employee.salary > 5000;
+});
+console.log(employeeEarningLessThanFiveThousand); */
+
+// Task-29: Find the first employee who earns exactly 5100.
+
+// Solution-29:
+/* const employees = [
+  { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+  { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+  { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+  { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+  { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+  { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+  { id: 7, name: "George", departmentId: 3, salary: 5200 },
+  { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+  { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+  { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+];
+const firstEmployeeEarnsFiveThousandOneHoundred = employees.find((employee) => {
+  return employee.salary === 5100;
+});
+console.log(firstEmployeeEarnsFiveThousandOneHoundred); */
+
+// Task-30: Find the last employee in the "HR" department.
+
+// Solution-30:
+/* const departments = [
+  { id: 1, name: "HR" },
+  { id: 2, name: "Engineering" },
+  { id: 3, name: "Marketing" },
+  { id: 4, name: "Sales" },
+];
+const employees = [
+  { id: 1, name: "Alice", departmentId: 1, salary: 5000 },
+  { id: 2, name: "Bob", departmentId: 2, salary: 7000 },
+  { id: 3, name: "Charlie", departmentId: 3, salary: 4500 },
+  { id: 4, name: "Diana", departmentId: 1, salary: 5500 },
+  { id: 5, name: "Edward", departmentId: 2, salary: 8000 },
+  { id: 6, name: "Fiona", departmentId: 4, salary: 6000 },
+  { id: 7, name: "George", departmentId: 3, salary: 5200 },
+  { id: 8, name: "Helen", departmentId: 4, salary: 7200 },
+  { id: 9, name: "Ian", departmentId: 2, salary: 4800 },
+  { id: 10, name: "Jane", departmentId: 1, salary: 5100 },
+];
+
+const hrDepartment = departments.findLastIndex(
+  (department) => department.name === "HR"
+);
+
+const hREmployee = hrDepartment >= 0 ? departments[hrDepartment] : null;
+
+const hrEmployees = employees.filter(
+  (emp) => emp.departmentId === hREmployee.id
+);
+
+const lastHREmployee =
+  hrEmployees.length > 0 ? hrEmployees[hrEmployees.length - 1] : null;
+
+console.log("Last HR Employee:", lastHREmployee); */
